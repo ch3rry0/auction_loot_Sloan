@@ -1,0 +1,204 @@
+.auction-room {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.loading {
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  padding: 3rem;
+}
+
+.room-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 1200px) {
+  .room-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cartes communes */
+.player-info-card,
+.current-item-card,
+.players-list-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Informations du joueur */
+.player-info-card h3 {
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.player-details {
+  text-align: center;
+}
+
+.player-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #667eea;
+  margin-bottom: 1rem;
+}
+
+.player-coins {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #f39c12;
+}
+
+/* Objet actuel */
+.current-item-card {
+  position: relative;
+}
+
+.timer {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.item-name {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.bid-info {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.current-bid {
+  font-size: 1.5rem;
+  color: #4caf50;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.highest-bidder {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.starting-bid {
+  font-size: 1.5rem;
+  color: #2196f3;
+  font-weight: bold;
+}
+
+/* Formulaire d'enchère */
+.bid-form {
+  margin-top: 2rem;
+}
+
+.bid-input-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.bid-input-group input {
+  flex: 1;
+  padding: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+
+.bid-input-group input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.bid-input-group button {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+  white-space: nowrap;
+}
+
+.bid-input-group button:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+
+.bid-input-group button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.bid-error {
+  margin-top: 1rem;
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 0.75rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* Liste des joueurs */
+.players-list-card h3 {
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.players-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.player-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f5f5f5;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.player-item:hover {
+  background: #e0e0e0;
+}
+
+.player-item.current-player {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.player-list-name {
+  font-weight: 500;
+}
+
+.player-list-coins {
+  font-weight: bold;
+}
